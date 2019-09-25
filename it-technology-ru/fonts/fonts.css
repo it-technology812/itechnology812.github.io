@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'depo_apparel';
+    src: url('DrukTextWide-Heavy.woff2') format('woff2'),
+        url('DrukTextWide-Heavy.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'depo_apparel';
+    src: url('DrukTextWide-Medium.woff2') format('woff2'),
+        url('DrukTextWide-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+

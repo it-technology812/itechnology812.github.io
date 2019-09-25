@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>it-techology</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css' />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&display=swap&subset=cyrillic">
+  <style>
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10000000;
+      background: url('img/loaderback.png') no-repeat center/cover;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      transition: all 1s ease;
+      transition-delay: 2s;
+      box-shadow: 0 0 50px 10px rgba(0, 0, 0, .5)
+    }
+
+    .loader.loaded {
+      transform: translateY(-100%);
+      visibility: hidden;
+    }
+
+    @keyframes loaderpic {
+      0% {
+        transform: translateY(-100%);
+      }
+
+      50% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .loader img {
+      height: 60vh;
+      width: auto;
+      max-width: 80vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-100%);
+    }
+
+    .loader.loaded img {
+      animation: loaderpic 1s ease;
+      animation-delay: 1.5s;
+    }
+
+    .loader p {
+      font-size: 14px;
+    }
+
+    @keyframes loadcircle {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    .loader .loadcircle {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid rgba(255, 255, 255, 0);
+      border-left: 2px solid rgba(255, 255, 255, 0);
+      animation: loadcircle 1s linear infinite;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+  <link rel="dns-prefetch" href="//images-cdn.ecwid.com/">
+  <link rel="dns-prefetch" href="//images.ecwid.com/">
+  <link rel="dns-prefetch" href="//app.ecwid.com/">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="loader">
+    <img src="img/loader.png" alt="">
+    <p></p>
+    <span class="loadcircle"></span>
+  </div>
+  <div class="nav">
+    <div class="logo">
+      <h1>
+        <a href="/">it-technology-ru</a>
+      </h1>
+    </div>
+    
+  </div>
+  
+  <div class="main">
+
+    <a class="item" style="background-image: url('img/rapp2_back.png')" href="1/index.html" ">
+      <div class="wrapper">
+        <div class="text">
+          <h2>BEAUTY HOUSE</h2>
+          <span>Stylist</span>
+        </div>
+        <div class="outofstock">
+          out of stock
+        </div>
+      </div>
+    </a>
+    <a class="item" style="background-image: url('img/stayugly_back.png')" href="2/index.html">
+      <div class="wrapper">
+        <div class="text">
+          <h2>Tatto</h2>
+          <span>proffesional</span>
+        </div>
+        <div class="outofstock">
+          out of stock
+        </div>
+      </div>
+    </a>
+    <a class="item" style="background-image: url('img/stayuglypants_back.png')" href="3/index.html" > 
+      <div class="wrapper">
+        <div class="text">
+          <h2>Video maker</h2>
+          <span>master</span>
+        </div>
+        <div class="outofstock">
+            out of stock
+          </div>
+      </div>
+    </a>
+    <a class="item" style="background-image: url('img/otricala_back.png')" href="4/index.html"">
+      <div class="wrapper">
+        <div class="text">
+          <h2>Lending hook</h2>
+          <span>photograph</span>
+        </div>
+        <div class="outofstock">
+          out of stock
+        </div>
+      </div>
+    </a>
+    <!-- <a class="item" style="" onclick="openProduct('147285523')">
+        <div class="wrapper">
+          <div class="text">
+            <h2>Testing</h2>
+            <span>Сэмпл.</span>
+          </div>
+          <div class="outofstock">
+            out of stock
+          </div>
+        </div>
+      </a> -->
+  </div>
+  <div class="terms">
+    powered by/ <a href="#contact" rel="modal:open">контакты</a><br>
+    developed by
+    <a href="">it-technology-ru@mail.ru</a>
+  </div>
+  
+  <div id="contact" class="modal">
+    <h1>Контакты</h1>
+    <p>
+      по всем вопросам:<br>
+      <a href="mailto:it-technology-ru@mail.ru">it-technology-ru@mail.ru</a>
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/src/tilt.jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script data-cfasync="false" type="text/javascript"
+    src="https://app.ecwid.com/script.js?12987548&data_platform=code&data_date=2019-06-23" charset="utf-8"></script>
+  <!-- <script src='https://d1e443hvef5jf2.cloudfront.net/static/iframeintegration.js'></script> -->
+  <script src="app.js"></script>
+</body>
+
+</html>
